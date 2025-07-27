@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الثقة للخدمات الطلابية المتكاملة - خدمات أكاديمية شاملة</title>
+    <meta name="description" content="منصة الثقة للخدمات الطلابية المتكاملة - نقدم خدمات أكاديمية شاملة للطلاب: المشاريع، الواجبات، حل اللابات، الخرائط الذهنية، والسير الذاتية">
+    <meta name="keywords" content="خدمات طلابية، مشاريع جامعية، واجبات، حل لابات، خرائط ذهنية، سيرة ذاتية">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- زر واتساب عائم محسن -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">تواصل معنا</span>
+        <div class="pulse-ring"></div>
+    </div>
+
+    <!-- شريط التنقل المحسن -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" data-aos="fade-right">
+                <h2>الثقة للخدمات الطلابية المتكاملة</h2>
+            </div>
+            <ul class="nav-menu" data-aos="fade-left">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#services" class="nav-link">الخدمات</a></li>
+                <li><a href="#colleges" class="nav-link">التخصصات</a></li>
+                <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
+                <li><a href="#reviews" class="nav-link">التقييمات</a></li>
+                <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي المحسن -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-delay="100">الثقة للخدمات الطلابية المتكاملة</h1>
+            <p data-aos="fade-up" data-aos-delay="200">نقدم جميع الخدمات الأكاديمية لطلاب الجامعات بجودة عالية وأسعار تنافسية</p>
+            
+            <!-- شريط البحث المحسن -->
+            <div class="search-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="ابحث عن خدمتك... مثال: واجب محاسبة، مشروع برمجة، خريطة ذهنية">
+                    <button onclick="searchServices()" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <span class="suggestion-tag" onclick="searchFor('مشروع تخرج')">مشروع تخرج</span>
+                    <span class="suggestion-tag" onclick="searchFor('واجب محاسبة')">واجب محاسبة</span>
+                    <span class="suggestion-tag" onclick="searchFor('خريطة ذهنية')">خريطة ذهنية</span>
+                    <span class="suggestion-tag" onclick="searchFor('سيرة ذاتية')">سيرة ذاتية</span>
+                </div>
+            </div>
+
+            <!-- إحصائيات سريعة محسنة -->
+            <div class="stats-container" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="counter" data-target="2500">0</h3>
+                    <p>مشروع مكتمل</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="counter" data-target="1800">0</h3>
+                    <p>طالب راضي</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3><span class="counter" data-target="4.8">0</span>/5</h3>
+                    <p>متوسط التقييم</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3><span class="counter" data-target="95">0</span>%</h3>
+                    <p>التسليم في الوقت</p>
+                </div>
+            </div>
+
+            <!-- أزرار التواصل الاجتماعي المحسنة -->
+            <div class="social-buttons" data-aos="fade-up" data-aos-delay="900">
+                <a href="https://t.me/hhhhcfkkkeb" target="_blank" class="telegram-btn">
+                    <i class="fab fa-telegram"></i>
+                    <span>قناة أعمالنا</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <button onclick="openWhatsApp()" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>تواصل واتساب</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم لماذا نحن الجديد -->
+    <section class="why-us">
+        <div class="container">
+            <h2 data-aos="fade-up">لماذا تختار الثقة؟</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ضمان الجودة</h3>
+                    <p>نضمن لك أعلى مستويات الجودة في جميع أعمالنا مع إمكانية المراجعة والتعديل</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>سرعة التسليم</h3>
+                    <p>نلتزم بالمواعيد المحددة ونسلم أعمالنا في الوقت المناسب دون تأخير</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>دعم 24/7</h3>
+                    <p>فريق الدعم متاح على مدار الساعة للإجابة على استفساراتك ومساعدتك</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>نقدم أفضل الأسعار في السوق مع جودة عالية وخدمة ممتازة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات المحسن -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 data-aos="fade-up">خدماتنا الأكاديمية</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">نقدم جميع الخدمات التي يحتاجها الطالب الجامعي بجودة عالية وأسعار تنافسية</p>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="projects" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image">
+                        <img src="images/projects.png" alt="المشاريع والتكاليف">
+                        <div class="service-overlay">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>المشاريع والتكاليف</h3>
+                        <p>جميع أنواع المشاريع الجامعية والتكاليف لكافة التخصصات</p>
+                        <div class="service-price">من 80 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('projects')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('projects')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="assignments" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="images/assignments.png" alt="الواجبات">
+                        <div class="service-overlay">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>الواجبات الجامعية</h3>
+                        <p>حل الواجبات لجميع المقررات مع شرح مفصل</p>
+                        <div class="service-price">من 30 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('assignments')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('assignments')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="labs" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-image">
+                        <img src="images/labs.png" alt="حل اللابات">
+                        <div class="service-overlay">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>حل اللابات</h3>
+                        <p>حل المختبرات العملية والتطبيقية لجميع التخصصات</p>
+                        <div class="service-price">من 50 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('labs')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('labs')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="mindmaps" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="images/mind_maps.png" alt="الخرائط الذهنية">
+                        <div class="service-overlay">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>الخرائط الذهنية</h3>
+                        <p>تصميم خرائط ذهنية احترافية لتنظيم المعلومات</p>
+                        <div class="service-price">من 40 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('mindmaps')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('mindmaps')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="cv" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-image">
+                        <img src="images/cv.png" alt="السير الذاتية">
+                        <div class="service-overlay">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>السير الذاتية</h3>
+                        <p>إعداد وتصميم سير ذاتية احترافية للطلاب</p>
+                        <div class="service-price">من 50 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('cv')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('cv')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="training_reports" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-image">
+                        <img src="images/training_reports.png" alt="تقارير التدريب">
+                        <div class="service-overlay">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>تقارير التدريب</h3>
+                        <p>كتابة وإعداد تقارير التدريب العملي والميداني</p>
+                        <div class="service-price">من 70 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('training_reports')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('training_reports')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="graduation_research" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-image">
+                        <img src="images/graduation_research.png" alt="بحوث التخرج">
+                        <div class="service-overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>بحوث التخرج</h3>
+                        <p>مساعدة في إعداد وكتابة بحوث ومشاريع التخرج</p>
+                        <div class="service-price">من 100 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('graduation_research')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('graduation_research')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="academic_research" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-image">
+                        <img src="images/academic_research.png" alt="البحوث الأكاديمية">
+                        <div class="service-overlay">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>البحوث الأكاديمية</h3>
+                        <p>إعداد وكتابة البحوث الأكاديمية المتخصصة</p>
+                        <div class="service-price">من 90 ريال</div>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="service-buttons">
+                            <button class="service-btn primary" onclick="orderService('academic_research')">
+                                <i class="fas fa-shopping-cart"></i>
+                                اطلب الآن
+                            </button>
+                            <button class="service-btn secondary" onclick="showServiceDetails('academic_research')">
+                                <i class="fas fa-info-circle"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التخصصات المحسن -->
+    <section id="colleges" class="colleges">
+        <div class="container">
+            <h2 data-aos="fade-up">التخصصات المدعومة</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">نغطي جميع تخصصات ومقررات الكليات الرئيسية</p>
+            
+            <div class="colleges-grid">
+                <div class="college-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="college-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>كلية الأعمال</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> إدارة الأعمال</li>
+                        <li><i class="fas fa-check"></i> المحاسبة</li>
+                        <li><i class="fas fa-check"></i> التمويل والاستثمار</li>
+                        <li><i class="fas fa-check"></i> التسويق</li>
+                        <li><i class="fas fa-check"></i> إدارة الموارد البشرية</li>
+                        <li><i class="fas fa-check"></i> نظم المعلومات الإدارية</li>
+                    </ul>
+                    <button class="college-btn" onclick="showCollegeServices('business')">
+                        <i class="fas fa-eye"></i>
+                        عرض الخدمات
+                    </button>
+                </div>
+
+                <div class="college-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="college-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>كلية الحاسوب</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> علوم الحاسوب</li>
+                        <li><i class="fas fa-check"></i> هندسة البرمجيات</li>
+                        <li><i class="fas fa-check"></i> نظم المعلومات</li>
+                        <li><i class="fas fa-check"></i> تقنية المعلومات</li>
+                        <li><i class="fas fa-check"></i> الأمن السيبراني</li>
+                        <li><i class="fas fa-check"></i> الشبكات</li>
+                    </ul>
+                    <button class="college-btn" onclick="showCollegeServices('computer')">
+                        <i class="fas fa-eye"></i>
+                        عرض الخدمات
+                    </button>
+                </div>
+
+                <div class="college-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="college-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>كليات أخرى</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> الهندسة</li>
+                        <li><i class="fas fa-check"></i> الطب</li>
+                        <li><i class="fas fa-check"></i> العلوم</li>
+                        <li><i class="fas fa-check"></i> الآداب والعلوم الإنسانية</li>
+                        <li><i class="fas fa-check"></i> التربية</li>
+                        <li><i class="fas fa-check"></i> الحقوق</li>
+                    </ul>
+                    <button class="college-btn" onclick="showCollegeServices('others')">
+                        <i class="fas fa-eye"></i>
+                        عرض الخدمات
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم أعمالنا المحسن -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up">نماذج من أعمالنا</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">أمثلة على المشاريع والخدمات التي قدمناها لطلابنا</p>
+            
+            <!-- زر قناة التليجرام المحسن -->
+            <div class="telegram-showcase" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://t.me/hhhhcfkkkeb" target="_blank" class="telegram-channel-btn">
+                    <i class="fab fa-telegram"></i>
+                    <div class="telegram-content">
+                        <h3>شاهد جميع أعمالنا</h3>
+                        <p>قناة التليجرام تحتوي على مئات الأعمال المنجزة</p>
+                    </div>
+                    <div class="btn-glow"></div>
+                </a>
+            </div>
+
+            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="300">
+                <button class="filter-btn active" onclick="filterPortfolio('all')">الكل</button>
+                <button class="filter-btn" onclick="filterPortfolio('business')">كلية الأعمال</button>
+                <button class="filter-btn" onclick="filterPortfolio('computer')">كلية الحاسوب</button>
+                <button class="filter-btn" onclick="filterPortfolio('others')">كليات أخرى</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="business" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/300x200?text=خطة+عمل+مقهى" alt="خطة عمل مقهى">
+                        <div class="portfolio-overlay">
+                            <button class="view-btn" onclick="viewProject('business-plan')">
+                                <i class="fas fa-eye"></i>
+                                عرض المشروع
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>خطة عمل مقهى</h3>
+                        <p>مشروع تخرج - إدارة أعمال</p>
+                        <span class="portfolio-rating">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="computer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/300x200?text=تطبيق+إدارة+مكتبة" alt="تطبيق إدارة مكتبة">
+                        <div class="portfolio-overlay">
+                            <button class="view-btn" onclick="viewProject('library-app')">
+                                <i class="fas fa-eye"></i>
+                                عرض المشروع
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>تطبيق إدارة مكتبة</h3>
+                        <p>مشروع برمجة - Java</p>
+                        <span class="portfolio-rating">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="business" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/300x200?text=تحليل+مالي+شركة" alt="تحليل مالي شركة">
+                        <div class="portfolio-overlay">
+                            <button class="view-btn" onclick="viewProject('financial-analysis')">
+                                <i class="fas fa-eye"></i>
+                                عرض المشروع
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>تحليل مالي شركة</h3>
+                        <p>تكليف محاسبة</p>
+                        <span class="portfolio-rating">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="computer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/300x200?text=موقع+ويب+مطعم" alt="موقع ويب مطعم">
+                        <div class="portfolio-overlay">
+                            <button class="view-btn" onclick="viewProject('restaurant-website')">
+                                <i class="fas fa-eye"></i>
+                                عرض المشروع
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>موقع ويب مطعم</h3>
+                        <p>مشروع تصميم ويب</p>
+                        <span class="portfolio-rating">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="business" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/300x200?text=خطة+تسويقية" alt="خطة تسويقية">
+                        <div class="portfolio-overlay">
+                            <button class="view-btn" onclick="viewProject('marketing-plan')">
+                                <i class="fas fa-eye"></i>
+                                عرض المشروع
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>خطة تسويقية منتج</h3>
+                        <p>مشروع تسويق</p>
+                        <span class="portfolio-rating">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="others" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/300x200?text=بحث+علمي" alt="بحث علمي">
+                        <div class="portfolio-overlay">
+                            <button class="view-btn" onclick="viewProject('scientific-research')">
+                                <i class="fas fa-eye"></i>
+                                عرض المشروع
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>بحث علمي متخصص</h3>
+                        <p>مشروع تخرج - هندسة</p>
+                        <span class="portfolio-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التقييمات المحسن -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 data-aos="fade-up">آراء عملائنا</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">ماذا يقول طلابنا عن خدماتنا</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">أ</div>
+                            <div class="reviewer-details">
+                                <h4>أحمد محمد</h4>
+                                <p>طالب إدارة أعمال</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"خدمة ممتازة وسريعة. تم تسليم مشروع التخرج في الوقت المحدد بجودة عالية جداً. أنصح بشدة!"</p>
+                    <span class="review-date">منذ أسبوعين</span>
+                </div>
+
+                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ف</div>
+                            <div class="reviewer-details">
+                                <h4>فاطمة العلي</h4>
+                                <p>طالبة علوم حاسوب</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"ساعدوني في حل مشروع البرمجة بـ Java. الكود كان نظيف ومفهوم مع شرح مفصل. شكراً لكم!"</p>
+                    <span class="review-date">منذ 3 أيام</span>
+                </div>
+
+                <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">خ</div>
+                            <div class="reviewer-details">
+                                <h4>خالد السعد</h4>
+                                <p>طالب محاسبة</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"أسعار معقولة وجودة ممتازة. حصلت على درجة كاملة في تكليف محاسبة التكاليف. سأتعامل معهم مرة أخرى."</p>
+                    <span class="review-date">منذ أسبوع</span>
+                </div>
+
+                <div class="review-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ن</div>
+                            <div class="reviewer-details">
+                                <h4>نورا أحمد</h4>
+                                <p>طالبة تسويق</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"الخريطة الذهنية التي صمموها لي كانت رائعة ومنظمة. ساعدتني كثيراً في فهم المادة وتذكرها."</p>
+                    <span class="review-date">منذ 5 أيام</span>
+                </div>
+
+                <div class="review-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">م</div>
+                            <div class="reviewer-details">
+                                <h4>محمد الزهراني</h4>
+                                <p>طالب هندسة</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"الفريق محترف جداً والتواصل سهل عبر الواتساب. تم إنجاز العمل بدقة وفي الوقت المحدد."</p>
+                    <span class="review-date">منذ 4 أيام</span>
+                </div>
+
+                <div class="review-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">س</div>
+                            <div class="reviewer-details">
+                                <h4>سارة القحطاني</h4>
+                                <p>طالبة نظم معلومات</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"السيرة الذاتية التي أعدوها لي احترافية جداً. حصلت على قبول في التدريب التعاوني بفضلها!"</p>
+                    <span class="review-date">منذ أسبوع</span>
+                </div>
+            </div>
+
+            <div class="reviews-stats" data-aos="fade-up" data-aos-delay="700">
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="4.8">0</span>/5</h3>
+                    <p>متوسط التقييم العام</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="98">0</span>%</h3>
+                    <p>رضا العملاء</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+<span class="counter" data-target="1500">0</span></h3>
+                    <p>تقييم إيجابي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل المحسن -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">تواصل معنا</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">نحن هنا لمساعدتك في جميع احتياجاتك الأكاديمية</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>واتساب</h3>
+                            <p>966549225740+</p>
+                            <a href="https://wa.me/966549225740" target="_blank" class="contact-btn">تواصل الآن</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>قناة التليجرام</h3>
+                            <p>شاهد جميع أعمالنا</p>
+                            <a href="https://t.me/hhhhcfkkkeb" target="_blank" class="contact-btn">زيارة القناة</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>ساعات العمل</h3>
+                            <p>24/7 - خدمة على مدار الساعة</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>التسليم</h3>
+                            <p>سريع ومضمون في الوقت المحدد</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left" data-aos-delay="300">
+                    <h3>استفسار سريع</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="اسمك الكريم" required>
+                        <input type="text" placeholder="تخصصك" required>
+                        <select required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="projects">مشاريع وتكاليف</option>
+                            <option value="assignments">واجبات</option>
+                            <option value="labs">حل لابات</option>
+                            <option value="mindmaps">خرائط ذهنية</option>
+                            <option value="cv">سيرة ذاتية</option>
+                            <option value="training_reports">تقارير التدريب</option>
+                            <option value="graduation_research">بحوث التخرج</option>
+                            <option value="academic_research">البحوث الأكاديمية</option>
+                        </select>
+                        <textarea placeholder="تفاصيل طلبك..." rows="4" required></textarea>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الاستفسار
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر المحسن -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>الثقة للخدمات الطلابية المتكاملة</h3>
+                    <p>نقدم خدمات أكاديمية شاملة لجميع طلاب الجامعات بجودة عالية وأسعار تنافسية</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/966549225740" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/hhhhcfkkkeb" target="_blank"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li>المشاريع والتكاليف</li>
+                        <li>الواجبات الجامعية</li>
+                        <li>حل اللابات</li>
+                        <li>الخرائط الذهنية</li>
+                        <li>السير الذاتية</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>التخصصات</h3>
+                    <ul>
+                        <li>كلية الأعمال</li>
+                        <li>كلية الحاسوب</li>
+                        <li>الهندسة</li>
+                        <li>العلوم</li>
+                        <li>الطب</li>
+                        <li>الآداب</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="footer-contact">
+                        <p><i class="fab fa-whatsapp"></i> +966549225740</p>
+                        <p><i class="fab fa-telegram"></i> قناة التليجرام</p>
+                        <p><i class="fas fa-clock"></i> خدمة مستمرة 24/7</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 الثقة للخدمات الطلابية المتكاملة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- النوافذ المنبثقة للخدمات -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- تحميل المكتبات -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
